@@ -1,26 +1,14 @@
 import React from "react";
 import Trauzers from "../../../mock/trauzers";
-import { Buyed, Card, Wrapper } from "../style";
+import ShowCard from "../../ShowCards";
+import { Container } from "../style";
 
-export const Trouzers = () => {
+export const Trauzer = () => {
   return (
-    <div>
-      <Wrapper>
-        {Trauzers.map((value) => {
-          return (
-            <Card key={value.id} active={Trauzers.length}>
-              <Card.Img src={value.img} />
-              <Buyed>
-                {!value.buyed && <Buyed.Title>Распродано</Buyed.Title>}
-              </Buyed>
-              <Card.Title>{value.title}</Card.Title>
-              <Card.Price>{value.price}</Card.Price>
-            </Card>
-          );
-        })}
-      </Wrapper>
-    </div>
+    <Container>
+      <ShowCard data={Trauzers} />
+    </Container>
   );
 };
 
-export default Trouzers;
+export default Trauzer;

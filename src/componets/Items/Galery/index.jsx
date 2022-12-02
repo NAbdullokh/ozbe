@@ -8,7 +8,7 @@ export const Galery = () => {
       <Container.Title>Галерея</Container.Title>
       <ImgWrapper>
         {Images.map((value) => {
-          return <ImgWrapper.Img src={value.img} alt="img" />;
+          return <ImgWrapper.Img key={value.id} src={value.img} alt="img" />;
         })}
       </ImgWrapper>
     </Container>

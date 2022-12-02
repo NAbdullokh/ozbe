@@ -1,19 +1,23 @@
-import img1 from "../assets/shorts/1.webp";
-import img2 from "../assets/shorts/2.webp";
+import img1 from "../assets/svitshot/1.webp";
+import img2 from "../assets/svitshot/2.webp";
 
 export const Svitshots = [
   {
     id: 1,
-    title: "Черные шорты Barakalla ozbe",
-    price: "200000 сум",
+    title: "Синий свитшот Ozbe planet",
+    price: 220000,
     img: img1,
-    buyed: false,
+    categoryPath: '/svitshots',
+    amount: 1,
+    buyed: true,
   },
   {
     id: 2,
-    title: "Коричневые шорты Barakalla ozbe",
-    price: "200000 сум",
+    title: "Синий свитшот Barakalla ozbe",
+    price: 220000,
     img: img2,
+    categoryPath: '/svitshots',
+    amount: 1,
     buyed: true,
   },
 ];

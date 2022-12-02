@@ -9,7 +9,7 @@ const Slider = () => (
     <Carousel autoplay>
       {clothesData.map((value) => {
         return (
-          <Wrapper>
+          <Wrapper key={value.id}>
             <Img src={value.img} alt="logo" />
             <Text>{value.title}</Text>
           </Wrapper>

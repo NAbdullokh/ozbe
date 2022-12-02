@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 90%;
   margin: 80px auto;
-  padding: 20px;
   display: flex;
   justify-content: center;
+  padding: 15px;
   flex-wrap: wrap;
 `;
 
@@ -22,7 +22,7 @@ export const Card = styled.div`
 
   @media (max-width: 650px) {
     width: 300px;
-    height: 250px;
+    height: 350px;
   }
 `;
 

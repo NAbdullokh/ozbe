@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   background-color: #fcfcfc;
   flex-wrap: wrap;
+  margin-top: 300px;
   @media (max-width: 740px) {
     flex-direction: column;
   }

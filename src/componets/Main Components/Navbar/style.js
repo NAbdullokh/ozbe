@@ -8,10 +8,10 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 25px;
   background-color: white;
-  /* position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 999; */
+  z-index: 999;
   .bar {
     display: none;
     @media (max-width: 650px) {

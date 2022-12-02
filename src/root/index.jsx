@@ -4,10 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { navbarData } from "../utils/navbar";
 import { Footer } from "../componets/Main Components/Footer";
 import { Container } from "./style";
-import Shorts from "../componets/Clothes/Shorts";
-import Svitshot from "../componets/Clothes/Svitshot";
-import TShirts from "../componets/Clothes/T-Shirt";
-import Trouzers from "../componets/Clothes/Trouzers";
+import { clothesData } from "../utils/clothesData";
+import Generic from "../componets/Generic";
 
 export const Root = () => {
   return (
@@ -25,10 +23,22 @@ export const Root = () => {
                   />
                 );
               })}
-              <Route path="/shorts" element={<Shorts />} />
-              <Route path="/t-shirts" element={<TShirts />} />
-              <Route path="/svitshots" element={<Svitshot />} />
-              <Route path="/trauzers" element={<Trouzers />} />
+              {clothesData.map((item) => {
+                return (
+                  <>
+                    <Route
+                      key={item.id}
+                      path={item.path}
+                      element={item.element}
+                    />
+                    <Route
+                      path={`${item.path}/:id`}
+                      element={<Generic category={item.category} />}
+                    />
+                  </>
+                );
+              })}
+              <Route path={"*"} element={<h1>PAGE NOT FOUND 404</h1>} />
             </Route>
           </Route>
         </Routes>
